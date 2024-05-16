@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import CardOne from './components/Cards/CardOne';
 
 
 function App({ moduleData }) {
@@ -10,7 +11,7 @@ function App({ moduleData }) {
   );
   return (
     <div className="sw-article-carousel">
-      
+      <CardOne/>
     </div>
   );
 }
