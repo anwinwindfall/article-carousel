@@ -1,13 +1,76 @@
 [
   {
-    "default": 0,
-    "min": 0,
-    "max": 100,
-    "display": "slider",
-    "label": "Starting number of reasons",
-    "locked": false,
-    "name": "initial_count",
-    "required": false,
-    "type": "number"
+   "type": "choice",
+   "id": "b4e68cd5-37ca-fc42-ee34-ebbc701f5950",
+   "display": "radio",
+   "choices": [
+    [
+     "card_one",
+     "Card One"
+    ],
+    [
+     "card_two",
+     "Card Two"
+    ]
+   ],
+   "label": "Card Type",
+   "name": "card_type",
+   "default": "card_one"
+  },
+  {
+   "type": "text",
+   "id": "c19951cd-4fbc-dd40-9e4a-238761bb8e33",
+   "validation_regex": "",
+   "label": "Heading",
+   "name": "heading",
+   "default": "Top Articles"
+  },
+  {
+   "type": "group",
+   "id": "1834e358-7995-92a8-15f0-386affbf7b32",
+   "label": "Cards",
+   "children": [
+    {
+     "type": "text",
+     "id": "79cc389a-edb0-c371-6043-b7ac9a22d019",
+     "validation_regex": "",
+     "label": "Title",
+     "name": "title"
+    },
+    {
+     "type": "text",
+     "validation_regex": "",
+     "label": "Sub Title",
+     "name": "sub_title",
+     "oldId": "79cc389a-edb0-c371-6043-b7ac9a22d019",
+     "id": "ef219455-3919-9c7f-0b5b-b3f5ec74b37e"
+    },
+    {
+     "type": "image",
+     "id": "e7fa98ea-348f-7048-9930-766c029d9924",
+     "default": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "lazy"
+     },
+     "resizable": false,
+     "responsive": true,
+     "show_loading": false,
+     "label": "Card Image",
+     "name": "card_image"
+    },
+    {
+     "type": "text",
+     "validation_regex": "",
+     "label": "URL",
+     "name": "url",
+     "oldId": "ef219455-3919-9c7f-0b5b-b3f5ec74b37e",
+     "id": "e0ac0a45-680d-337d-351c-b8d824c8f74d"
+    }
+   ],
+   "name": "cards",
+   "default": [],
+   "occurrence": {}
   }
-]
+ ]
