@@ -1,6 +1,8 @@
 import React from 'react'
 import './cardOne.scss'
 
+
+
 const CardOne = ({title, subTitle, image, link}) => {
 
   function onClick(){

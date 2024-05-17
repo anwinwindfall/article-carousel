@@ -4,10 +4,12 @@ import React from 'react'
 import CardOne from '../Cards/CardOne';
 import CardTwo from '../Cards/CardTwo';
 import './Carousel.scss'
+import leftangle from '../../images/leftangle.svg';
+import rightangle from '../../images/rightangle.svg';
 
-const Carousel = ({items, type}) => {
-    const width=window.innerWidth
-    const numberOfCards=width/230
+const Carousel = ({ items, type }) => {
+    const width = window.innerWidth
+    const numberOfCards = width / 230
     // const responsive_1 = {
     //     0: { items: 1 },
     //     275: { items: 1.1 },
@@ -24,25 +26,31 @@ const Carousel = ({items, type}) => {
     //     1024: { items: 3 },
     // }
     // The card components are loaded into the item variable, then to be passed into carousel items
-    const item=items.map((items)=>{
-        if(type=='card_one'){
-            return <CardOne title={items.title} subTitle={items.sub_title} image={items.card_image} link={items.url}/>
+    const item = items.map((items) => {
+        if (type == 'card_one') {
+            return <CardOne title={items.title} subTitle={items.sub_title} image={items.card_image} link={items.url} />
         }
-        else if(type=='card_two'){
-            return <CardTwo title={items.title} subTitle={items.sub_title} image={items.card_image} link={items.url}/>
+        else if (type == 'card_two') {
+            return <CardTwo title={items.title} subTitle={items.sub_title} image={items.card_image} link={items.url} />
         }
     })
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     return (
-        <div>
+        <div className='section-carousel-wrapper'>
+            <div className='arrow-l'>
+                <img src={leftangle} />
+            </div>
             <AliceCarousel
-            items={item}
-            mouseTracking={true}
-            disableButtonsControls={true}
-            disableDotsControls={true}
-            autoWidth
+                items={item}
+                mouseTracking={true}
+                disableButtonsControls={true}
+                disableDotsControls={true}
+                autoWidth
             />
+            <div className='arrow-r'>
+                <img src={rightangle} />
+            </div>
         </div>
     )
 }

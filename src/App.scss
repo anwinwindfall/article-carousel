@@ -24,6 +24,30 @@
       color: #3F3837;
       margin-bottom: 10px;
     }
+    .arrow-r{
+      & img{
+          position: absolute;
+          right: 1%;
+          top: 50%;
+          // transform: translateY(-50%);
+          background-color: #ffffff;
+          border-radius: 50%;
+          z-index: 999;
+          cursor: pointer;
+      }
+  }
+  .arrow-l{
+      & img{
+          position: absolute;
+          left: 2%;
+          top: 50%;
+          // transform: translateY(-50%);
+          border-radius: 50%;
+          background-color: #ffffff !important;
+          z-index: 999;
+          cursor: pointer;
+      }
+  }
 
   }
 }
