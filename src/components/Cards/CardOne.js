@@ -1,15 +1,20 @@
 import React from 'react'
 import './cardOne.scss'
 
-const CardOne = () => {
+const CardOne = ({title, subTitle, image, link}) => {
+
+  function onClick(){
+    const url=new URL(link)
+    window.open(url, '_blank');
+  }
+  console.log(subTitle, "SubTitle");
   return (
-    <div class="cardOne">
-      <img src="https://picsum.photos/200/300" />
+    <div class="cardOne" onClick={onClick}>
+      <img src={image.src} alt={image.alt} loading={image.loading}/>
       <div class="container-card1">
-        <h5>7 mins read</h5>
+        <h5>{subTitle}</h5>
         <h3>
-          “God is truly with us in the
-          Eucharist” says Pope Francis
+          {title}
         </h3>
       </div>
     </div>
