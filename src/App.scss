@@ -1,5 +1,5 @@
 .sw-article-carousel__container {
-  margin-left: 68px;
+  margin: 7px 0 7px 68px;
 
   @media only screen and (max-width: 768px) {
     margin-left: 17px;
@@ -13,7 +13,7 @@
   // font-size: calc(10px + 2vmin);
   // color: white;
   div.card-section {
-    margin: 73px 0px;
+    // margin: 73px 0px;
 
     p {
       font-family: Inria Sans;
@@ -24,30 +24,7 @@
       color: #3F3837;
       margin-bottom: 10px;
     }
-    .arrow-r{
-      & img{
-          position: absolute;
-          right: 1%;
-          top: 50%;
-          // transform: translateY(-50%);
-          background-color: #ffffff;
-          border-radius: 50%;
-          z-index: 999;
-          cursor: pointer;
-      }
-  }
-  .arrow-l{
-      & img{
-          position: absolute;
-          left: 2%;
-          top: 50%;
-          // transform: translateY(-50%);
-          border-radius: 50%;
-          background-color: #ffffff !important;
-          z-index: 999;
-          cursor: pointer;
-      }
-  }
+    
 
   }
 }
