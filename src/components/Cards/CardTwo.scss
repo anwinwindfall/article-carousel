@@ -1,0 +1,35 @@
+.cardTwo {
+    max-width: 278px;
+    background-color: #623B32;
+    border-radius: 4px;
+
+    img {
+        border-radius: 4px;
+        width: 100%;
+        max-height: 158px;
+    }
+
+    .container-card2 {
+        padding: 20px 26px 44px 20px;
+        h5 {
+            font-family: Inria Sans;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 13.9px;
+            text-align: left;
+            color: #FFFFFF;
+            padding-top: 18px;
+            padding-bottom: 12px;
+        }
+
+        h3 {
+            font-family: Inria Sans;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            color: #FFFFFF;
+            max-width: 232px;
+        }
+    }
+}
