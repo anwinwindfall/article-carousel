@@ -54,23 +54,24 @@ const Carousel = ({ items, type }) => {
 
     return (
         <div className='section-carousel-wrapper'>
-            <div className='arrow-l' onClick={slidePrev}>
+            {!currentIndex==0&&<div className='arrow-l' onClick={slidePrev}>
                 <img src={leftangle} />
-            </div>
+            </div>}
             <AliceCarousel
             items={item}
             responsive={responsive}
             mouseTracking={true}
             disableButtonsControls={true}
             disableDotsControls={true}
-            // activeIndex={currentIndex}
+            activeIndex={currentIndex}
             autoWidth={true}
             ref={carouselRef}
-            // onSlideChanged={handleSlideChange}
+            onSlideChanged={handleSlideChange}
             />
-            <div className='arrow-r' onClick={slideNext}>
+            {currentIndex<items.length-numberOfCards&&<div className='arrow-r' onClick={slideNext}>
                 <img src={rightangle} />
-            </div>
+            </div>}
+            
         </div>
     )
 }
