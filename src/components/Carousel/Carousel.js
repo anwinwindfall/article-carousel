@@ -8,10 +8,21 @@ import leftangle from '../../images/leftangle.svg';
 import rightangle from '../../images/rightangle.svg';
 
 const Carousel = ({ items, type }) => {
+    const responsive = {
+        0: { items: 1 },
+        420: { items: 1 },
+        576: { items: 1 },
+        768: { items: 1.4 },
+        848: { items: 2.1 },  
+        925: { items: 2.1 },
+        1200: { items: 3 },
+        1700: { items: 3.8 },
+        2000: { items: 4 },
+      };
     const carouselRef= useRef(null)
     const [currentIndex, setCurrentIndex]= useState(0)
     const screenWidth = window.innerWidth
-    const numberOfCards = type=='card_one'?Math.floor(screenWidth / 230):Math.ceil(screenWidth/278)
+    const numberOfCards = type=='card_one'?Math.floor(screenWidth / 230):Math.ceil(screenWidth / 278)
     function handleRightArrow(){
         
     }
@@ -27,6 +38,7 @@ const Carousel = ({ items, type }) => {
       }
       function handleSlideChange(index){
         setCurrentIndex(index.item);
+        console.log(index);
       }
     
     // The card components are loaded into the item variable, then to be passed into carousel items
@@ -42,19 +54,21 @@ const Carousel = ({ items, type }) => {
 
     return (
         <div className='section-carousel-wrapper'>
-            <div className='arrow-l'>
+            <div className='arrow-l' onClick={slidePrev}>
                 <img src={leftangle} />
             </div>
             <AliceCarousel
             items={item}
+            responsive={responsive}
             mouseTracking={true}
             disableButtonsControls={true}
             disableDotsControls={true}
-            autoWidth
+            // activeIndex={currentIndex}
+            autoWidth={true}
             ref={carouselRef}
-            onSlideChanged={handleSlideChange}
+            // onSlideChanged={handleSlideChange}
             />
-            <div className='arrow-r'>
+            <div className='arrow-r' onClick={slideNext}>
                 <img src={rightangle} />
             </div>
         </div>
