@@ -7,7 +7,8 @@ const CardTwo = ({title, subTitle, image, link}) => {
     window.open(url, '_blank');
   }
   return (
-    <div class="cardTwo" onClick={onClick}>
+    <div style={{paddingRight:'10.6px', maxWidth:'278px'}}>
+      <div class="cardTwo" onClick={onClick}>
       <img src={image.src} alt={image.alt} loading={image.loading} />
       <div class="container-card2">
         <h5>{subTitle}</h5>
@@ -16,6 +17,8 @@ const CardTwo = ({title, subTitle, image, link}) => {
         </h3>
       </div>
     </div>
+    </div>
+    
   )
 }
 
