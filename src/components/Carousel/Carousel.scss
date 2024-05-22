@@ -8,34 +8,56 @@
   position: relative;
 
   .arrow-r {
-    background-color: aqua;
+    @media only screen and (max-width: 768px) {
+        position: absolute;
+        width: 50px;
+        height: 100px;
+        top: calc(50% - 40px);
+        right: 0;
+        background-color: transparent;
+
+    }
 
     & img {
-      position: absolute;
-      right: 1%;
-      top: 50%;
-      transform: translateY(-50%) !important;
-      background-color: #ffffff;
-      border-radius: 50%;
-      z-index: 999;
-      cursor: pointer;
+        position: absolute;
+        right: 10%;
+        top: 40%;
+        // transform: translateY(-50%);
+        background-color: #ffffff;
+        border-radius: 50%;
+        z-index: 999;
+        cursor: pointer;
+        @media only screen and (min-width: 768px) {
+            right: 1%;
+            top: 50%;
+        }
     }
+}
+
+.arrow-l {
+  @media only screen and (max-width: 768px) {
+      position: absolute;
+      width: 50px;
+      height: 100px;
+      top: calc(50% - 40px);
+      left: 0;
+      z-index: 9;
+      background-color: transparent;
   }
 
-  .arrow-l {
-    & img {
+  & img {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%) !important;
+      left: 10%;
+      top: 40%;
+      // transform: translateY(-50%);
       border-radius: 50%;
       background-color: #ffffff !important;
       z-index: 999;
       cursor: pointer;
-      left: calc(2% - 68px) !important;
-
-      @media only screen and (max-width: 767px){
-        left: calc(2% - 17px) !important;
+      @media only screen and (min-width: 768px) {
+          left: 2%;
+          top: 40%;
       }
-    }
   }
+}
 }
