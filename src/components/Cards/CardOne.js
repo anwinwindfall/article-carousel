@@ -9,7 +9,6 @@ const CardOne = ({title, subTitle, image, link}) => {
     const url=new URL(link)
     window.open(url, '_blank');
   }
-  console.log(subTitle, "SubTitle");
   return (
     <div class="cardOne" onClick={onClick}>
       <img src={image.src} alt={image.alt} loading={image.loading}/>

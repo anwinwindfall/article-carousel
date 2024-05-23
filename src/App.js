@@ -7,7 +7,6 @@ import './components/Carousel/Carousel.scss';
 
 
 function App({ moduleData }) {
-  console.log(moduleData.cards);
   return (
     <div className="sw-article-carousel__container">
       <div class="card-section">

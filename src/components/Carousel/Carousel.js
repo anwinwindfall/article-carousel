@@ -38,7 +38,6 @@ const Carousel = ({ items, type }) => {
       }
       function handleSlideChange(index){
         setCurrentIndex(index.item);
-        console.log(index);
       }
     
     // The card components are loaded into the item variable, then to be passed into carousel items
